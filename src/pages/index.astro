@@ -7,11 +7,18 @@ import Base from '../layouts/Base.astro';
   <!-- HERO -->
   <section class="section hero">
     <div class="container" style="text-align: center;">
-      <img
-        src="/images/wings_and_weed_logo_circle.webp"
-        alt="Kawaii monarch butterfly sitting on milkweed leaves inside a peach circle"
-        class="hero__logo"
-      />
+      <picture>
+        <source media="(max-width: 480px)" srcset="/images/wings_and_weed_logo_circle_400.webp" />
+        <source media="(max-width: 768px)" srcset="/images/wings_and_weed_logo_circle_600.webp" />
+        <source media="(min-width: 769px)" srcset="/images/wings_and_weed_logo_circle_900.webp" />
+        <img
+          src="/images/wings_and_weed_logo_circle_600.webp"
+          alt="Kawaii monarch butterfly sitting on milkweed leaves inside a peach circle"
+          class="hero__logo"
+          width="900"
+          height="900"
+        />
+      </picture>
       <h1 class="hero__title">Wings & Weed Co.</h1>
       <p class="hero__tagline">From egg to wing, we nurture queens and kings.</p>
       <p class="hero__sub">Two neighbors. A backyard full of milkweed. And a mission to help monarch butterflies, one tiny egg at a time.</p>
@@ -88,7 +95,7 @@ import Base from '../layouts/Base.astro';
   }
 
   .hero__logo {
-    max-width: 600px;
+    width: min(600px, 70vw);
     margin-inline: auto;
     margin-bottom: 2rem;
   }
@@ -104,12 +111,14 @@ import Base from '../layouts/Base.astro';
     font-size: 1.15rem;
     color: var(--color-milkweed);
     margin-bottom: 1.25rem;
+    text-wrap: balance;
   }
 
   .hero__sub {
     font-size: 1.1rem;
     max-width: 520px;
     margin-inline: auto;
+    padding-inline: 1rem;
     opacity: 0.85;
   }
 
