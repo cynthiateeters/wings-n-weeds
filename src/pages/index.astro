@@ -1,0 +1,140 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Wings & Weed Co." description="Two neighbors raising monarch butterflies in the Poconos, one tiny egg at a time.">
+
+  <!-- HERO -->
+  <section class="section hero">
+    <div class="container" style="text-align: center;">
+      <img
+        src="/images/wings_and_weed_logo.png"
+        alt="Wings & Weed Co. logo, kawaii monarch butterfly on milkweed"
+        class="hero__logo"
+      />
+      <h1 class="hero__title">Wings & Weed Co.</h1>
+      <p class="hero__tagline">From egg to wing, we nurture queens and kings.</p>
+      <p class="hero__sub">Two neighbors. A backyard full of milkweed. And a mission to help monarch butterflies, one tiny egg at a time.</p>
+    </div>
+  </section>
+
+  <!-- WHY MONARCHS NEED OUR HELP -->
+  <section class="section section--alt">
+    <div class="container">
+      <div class="card">
+        <h2>Why monarchs need our help</h2>
+        <p style="margin-top: 1rem;">
+          Every fall, millions of monarch butterflies make one of nature's most incredible journeys, up to 3,000 miles to the mountains of central Mexico. But their numbers have been dropping for decades. Habitat loss, pesticides, and vanishing milkweed mean fewer monarchs make it each year.
+        </p>
+        <p style="margin-top: 1rem;">
+          Milkweed is the only plant where monarchs lay their eggs, and the only food their caterpillars eat. As it disappears, so do they.
+        </p>
+      </div>
+
+      <div class="card" style="margin-top: 1.5rem;">
+        <h2>How we found them</h2>
+        <p style="margin-top: 1rem;">
+          As recent transplants to the Poconos, we were delighted by the milkweed that lines our road. The flowers have such a beautiful scent. But the butterflies! Oh, the butterflies! Seeing them in the summer and realizing that we could help a few grow healthy with our care made us feel like children. And with that child's amazement, we plan to pass it along to our grandchildren.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET THE TEAM -->
+  <section class="section">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 2rem; margin-bottom: 0.5rem;">Meet the team</h2>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar-circle">
+            <img src="/images/cynthia-pip.png" alt="Cynthia kawaii avatar holding Pip the monarch butterfly" />
+          </div>
+          <h3>Cynthia</h3>
+          <p>The one with the hat and the butterfly. Chief egg-spotter, milkweed gardener, and nickname-giver. (Pip says hi.)</p>
+        </div>
+
+        <div class="team-card">
+          <div class="avatar-circle">
+            <img src="/images/nancy.png" alt="Nancy kawaii avatar holding a milkweed leaf with a caterpillar" />
+          </div>
+          <h3>Nancy</h3>
+          <p>The one with the leaf and the caterpillar. Fearless beginner, caterpillar wrangler, and willing student of all things tiny and stripy.</p>
+        </div>
+      </div>
+
+      <p style="text-align: center; max-width: 580px; margin-inline: auto; margin-top: 0.5rem;">
+        We're two neighbors in the Poconos who decided our milkweed was too good to waste. This is our first season raising monarchs together, and we're documenting everything: the wins, the losses, and the absolute magic of watching a butterfly take its first flight.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-section">
+    <div class="container" style="text-align: center;">
+      <h2 class="cta-section__heading">Read our first Field Note</h2>
+      <p class="cta-section__sub">
+        We're calling them Field Notes, because we want to be good citizen scientists as we learn, and share every discovery with our grandchildren.
+      </p>
+      <a href="/log" class="btn btn--monarch">Read Field Notes &rarr;</a>
+    </div>
+  </section>
+
+</Base>
+
+<style>
+  .hero {
+    padding-block: 5rem 4rem;
+  }
+
+  .hero__logo {
+    max-width: 260px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+  }
+
+  .hero__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero__tagline {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--color-milkweed);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero__sub {
+    font-size: 1.1rem;
+    max-width: 520px;
+    margin-inline: auto;
+    opacity: 0.85;
+  }
+
+  .cta-section {
+    background: var(--color-monarch);
+    padding-block: 4rem;
+  }
+
+  .cta-section__heading {
+    color: hsl(25, 100%, 98%);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .cta-section__sub {
+    color: hsl(25, 100%, 96%);
+    max-width: 500px;
+    margin-inline: auto;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    opacity: 0.92;
+  }
+
+  .cta-section .btn--monarch {
+    background: hsl(25, 100%, 98%);
+    color: var(--color-monarch);
+  }
+</style>

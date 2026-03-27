@@ -1,0 +1,51 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const posts = (await getCollection('posts')).sort(
+  (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) =>
+    b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<Base
+  title="Field Notes, Wings & Weed Co."
+  description="Season dispatches from two neighbors raising monarch butterflies in the Poconos."
+>
+  <section class="section">
+    <div class="container">
+      <h1 style="font-size: clamp(2rem, 5vw, 2.75rem); margin-bottom: 0.4rem;">Field Notes</h1>
+      <p class="subtitle">Season dispatches from the backyard</p>
+
+      {posts.length === 0 ? (
+        <div class="coming-soon" style="margin-top: 2rem;">
+          <h3>Nothing yet. Check back when the season starts!</h3>
+          <p>We're still getting our cages ready. First notes coming soon.</p>
+        </div>
+      ) : (
+        <ul class="post-list">
+          {posts.map(post => (
+            <li class="post-card">
+              <p class="post-date">
+                {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                {post.data.author && <span>, by {post.data.author}</span>}
+              </p>
+              <h2><a href={`/log/${post.id}`}>{post.data.title}</a></h2>
+              <p>{post.data.description}</p>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .subtitle {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-milkweed);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+</style>

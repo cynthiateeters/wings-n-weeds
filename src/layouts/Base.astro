@@ -1,0 +1,53 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Wings & Weed Co.',
+  description = 'Two neighbors raising monarch butterflies in the Poconos, one tiny egg at a time.',
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&family=Nunito:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="site-nav">
+        <a href="/" class="site-nav__logo">
+          <img src="/images/wings_and_weed_logo.png" alt="" aria-hidden="true" class="site-nav__logo-img" />
+          Wings & Weed Co.
+        </a>
+        <ul class="site-nav__links">
+          <li><a href="/" aria-current={currentPath === '/' ? 'page' : undefined}>Home</a></li>
+          <li><a href="/log" aria-current={currentPath.startsWith('/log') ? 'page' : undefined}>Field Notes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Wings & Weed Co. Est. 2026. Poconos, PA</p>
+    </footer>
+  </body>
+</html>
