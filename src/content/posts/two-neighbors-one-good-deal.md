@@ -29,7 +29,7 @@ So when I needed help with my community garden plot this spring, I knew exactly 
   <figcaption>Wings & Weed Co., est. 2026.</figcaption>
 </figure>
 
-This year I'm doing it again but twice as better! I'll be sharing with Nancy everything I figured out last year, and she'll be bringing the fresh eyes that make you stop and notice things you didn't knwo or took for granted. We're two neighbors in the Poconos with milkweed lining our road and grandchildren we want to hand this wonder to.
+This year I'm doing it again but twice as better! I'll be sharing with Nancy everything I figured out last year, and she'll be bringing the fresh eyes that make you stop and notice things you didn't know or took for granted. We're two neighbors in the Poconos with milkweed lining our road and grandchildren we want to hand this wonder to.
 
 We're calling these posts Field Notes. We're not experts. We're paying attention, having fun, and planning on sharing. There's a difference, and we think it matters.
 
