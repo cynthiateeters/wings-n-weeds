@@ -18,10 +18,11 @@ No test suite or linter configured.
 
 ## Deployment
 
-Manual workflow. Do not auto-deploy.
+Netlify site `butterfly-wings` deploys from `github.com/cynthiateeters/wings-n-weeds` with Astro, to https://butterfly-wings.netlify.app.
 
-1. `gh repo create wings-n-weeds --public` + push (first time)
-2. `netlify deploy --prod` to deploy to butterfly-wings.netlify.app
+- Auto publishing is on. Every push or merge to `main` goes live, so work on a branch until it's ready.
+- Don't run `netlify deploy --prod` by hand. The push to `main` already publishes.
+- To pause publishing, use "Lock to stop auto publishing" in the site's Netlify deploys page.
 
 ## Architecture
 
@@ -72,4 +73,4 @@ Inline `<figure>` HTML works in post body for images. Images go in `public/image
 ## Content decisions
 
 - The how-to guide (cage section, etc.) is deferred. It will ship as a future Field Note once the season is underway.
-- Full project context (copy, branding, design decisions) is stored in memory-keeper under channels prefixed `ww-`. Pull those before making content changes.
+- Full project context (copy, branding, design decisions) is in this folder's Claude Code project memory, in `project-context.md`. Read it before making content changes.
