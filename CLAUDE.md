@@ -72,4 +72,4 @@ Inline `<figure>` HTML works in post body for images. Images go in `public/image
 ## Content decisions
 
 - The how-to guide (cage section, etc.) is deferred. It will ship as a future Field Note once the season is underway.
-- Full project context (copy, branding, design decisions) is stored in memory-keeper under channels prefixed `ww-`. Pull those before making content changes.
+- Full project context (copy, branding, design decisions) is in this folder's Claude Code project memory, in `project-context.md`. Read it before making content changes.
